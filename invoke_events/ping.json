@@ -1,0 +1,36 @@
+{
+  "version": "2.0",
+  "routeKey": "GET /",
+  "rawPath": "/",
+  "rawQueryString": "",
+  "headers": {
+    "accept": "application/json",
+    "content-length": "0",
+    "host": "api.example.com",
+    "user-agent": "curl/7.68.0",
+    "x-amzn-trace-id": "Root=1-6051b1c5-123456789abcdef012345678",
+    "x-forwarded-for": "192.168.1.1",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https"
+  },
+  "requestContext": {
+    "accountId": "123456789012",
+    "apiId": "abcdef123",
+    "domainName": "api.example.com",
+    "domainPrefix": "api",
+    "http": {
+      "method": "GET",
+      "path": "/",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "192.168.1.1",
+      "userAgent": "curl/7.68.0"
+    },
+    "requestId": "test-request-id-123",
+    "routeKey": "GET /",
+    "stage": "dev",
+    "time": "17/Mar/2021:13:45:00 +0000",
+    "timeEpoch": 1615986300000
+  },
+  "body": "",
+  "isBase64Encoded": false
+}
