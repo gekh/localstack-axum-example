@@ -1,16 +1,32 @@
-use lambda_http::{Body, Error, Request, Response, run, service_fn};
+use axum::{
+    Router,
+    routing::{get, post},
+};
+use lambda_http::run;
+use tower_http::cors::CorsLayer;
 
-async fn function_handler(_request: Request) -> Result<Response<Body>, Error> {
-    let response = Response::builder()
-        .status(200)
-        .header("content-type", "text/plain")
-        .body("Hello from Lambda!".into())
-        .map_err(Box::new)?;
+mod endpoints;
 
-    Ok(response)
-}
+use endpoints::{
+    hello::{hello_handler, hello_post_handler},
+    users::{create_user, get_user_by_id, get_users},
+};
 
 #[tokio::main]
-async fn main() -> Result<(), Error> {
-    run(service_fn(function_handler)).await
+async fn main() -> Result<(), lambda_http::Error> {
+    // Build our application with routes
+    let app = Router::new()
+        // Hello endpoints
+        .route("/hello", get(hello_handler))
+        .route("/hello", post(hello_post_handler))
+        // Users endpoints
+        .route("/users", get(get_users))
+        .route("/users/:id", get(get_user_by_id))
+        .route("/users", post(create_user))
+        // Health check endpoint
+        .route("/", get(|| async { "OK" }))
+        // Add CORS support
+        .layer(CorsLayer::permissive());
+
+    run(app).await
 }
