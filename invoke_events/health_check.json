@@ -4,7 +4,7 @@
   "rawPath": "/",
   "rawQueryString": "",
   "headers": {
-    "accept": "application/json",
+    "accept": "*/*",
     "content-length": "0",
     "host": "api.example.com",
     "user-agent": "curl/7.68.0",
@@ -25,7 +25,7 @@
       "sourceIp": "192.168.1.1",
       "userAgent": "curl/7.68.0"
     },
-    "requestId": "test-request-id-123",
+    "requestId": "health-check-request-123",
     "routeKey": "GET /",
     "stage": "dev",
     "time": "17/Mar/2021:13:45:00 +0000",

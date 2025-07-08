@@ -4,7 +4,7 @@ This folder contains mock AWS API Gateway events that can be used to test your L
 
 ## Files
 
-- `ping.json` - GET / (health check)
+- `health_check.json` - GET / (health check)
 - `hello_get.json` - GET /hello?name=John
 - `hello_post.json` - POST /hello with JSON body
 - `users_get.json` - GET /users?limit=5&offset=0
@@ -16,8 +16,8 @@ This folder contains mock AWS API Gateway events that can be used to test your L
 ### With AWS SAM CLI
 
 ```bash
-# Test the ping endpoint
-sam local invoke --event invoke_events/ping.json
+# Test the health check endpoint
+sam local invoke --event invoke_events/health_check.json
 
 # Test the hello GET endpoint
 sam local invoke --event invoke_events/hello_get.json
@@ -41,8 +41,8 @@ You can also use these events in your Rust unit tests by loading the JSON files 
 
 ```rust
 #[tokio::test]
-async fn test_ping_endpoint() {
-    let event_json = std::fs::read_to_string("invoke_events/ping.json").unwrap();
+async fn test_health_check_endpoint() {
+    let event_json = std::fs::read_to_string("invoke_events/health_check.json").unwrap();
     let event: lambda_http::Request = serde_json::from_str(&event_json).unwrap();
 
     let response = function_handler(event).await.unwrap();
