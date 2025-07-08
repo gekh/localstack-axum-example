@@ -96,18 +96,22 @@ _(press "q" to exit status message after lambda is updated)_
 ```sh
 awslocal lambda invoke \
   --function-name basic-axum-project \
-  --payload '{}' \
+  --payload file://invoke_events/root.json \
   --cli-binary-format raw-in-base64-out \
   response.json
 ```
 
+In `--payload file://invoke_events/root.json` you can change the payload to test different endpoints. Like `--payload file://invoke_events/hello_get.json`
+
 Print result:
 
 ```sh
-cat response.json | jq
+cat response.json
+#or
+cat response.json | jq .body | tr -d '\\\\' | sed 's/^\"//;s/\"$//' | jq
 ```
 
-_(install jq or remove "| jq" in the end to see raw response)_
+_(install jq for second option)_
 
 (Optional) Remove response.json
 

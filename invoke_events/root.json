@@ -1,12 +1,11 @@
 {
   "version": "2.0",
   "routeKey": "$default",
-  "rawPath": "/hello",
+  "rawPath": "/",
   "rawQueryString": "",
   "headers": {
-    "accept": "application/json",
-    "content-type": "application/json",
-    "content-length": "23",
+    "accept": "*/*",
+    "content-length": "0",
     "host": "localhost",
     "user-agent": "curl/7.88.1",
     "x-amz-date": "20230621T162541Z",
@@ -23,8 +22,8 @@
     "domainName": "localhost",
     "domainPrefix": "localhost",
     "http": {
-      "method": "POST",
-      "path": "/hello",
+      "method": "GET",
+      "path": "/",
       "protocol": "HTTP/1.1",
       "sourceIp": "127.0.0.1",
       "userAgent": "curl/7.88.1"
@@ -35,6 +34,5 @@
     "time": "21/Jun/2023:16:25:41 +0000",
     "timeEpoch": 1687364741000
   },
-  "body": "{\n    \"name\": \"lambda\"\n}",
   "isBase64Encoded": false
 }

@@ -1,39 +1,41 @@
 {
   "version": "2.0",
-  "routeKey": "GET /hello",
+  "routeKey": "$default",
   "rawPath": "/hello",
-  "rawQueryString": "name=John",
-  "queryStringParameters": {
-    "name": "John"
-  },
+  "rawQueryString": "name=lambda",
   "headers": {
-    "accept": "application/json",
+    "accept": "*/*",
     "content-length": "0",
-    "host": "api.example.com",
-    "user-agent": "curl/7.68.0",
-    "x-amzn-trace-id": "Root=1-6051b1c5-123456789abcdef012345678",
-    "x-forwarded-for": "192.168.1.1",
-    "x-forwarded-port": "443",
-    "x-forwarded-proto": "https"
+    "host": "localhost",
+    "user-agent": "curl/7.88.1",
+    "x-amz-date": "20230621T162541Z",
+    "x-amzn-tls-cipher-suite": "AES128-GCM-SHA256",
+    "x-amzn-tls-version": "TLSv1.2",
+    "x-amzn-trace-id": "Root=1-649320e5-123456781234567812345678",
+    "x-forwarded-for": "127.0.0.1",
+    "x-forwarded-port": "9000",
+    "x-forwarded-proto": "http"
+  },
+  "queryStringParameters": {
+    "name": "lambda"
   },
   "requestContext": {
     "accountId": "123456789012",
-    "apiId": "abcdef123",
-    "domainName": "api.example.com",
-    "domainPrefix": "api",
+    "apiId": "1234567890",
+    "domainName": "localhost",
+    "domainPrefix": "localhost",
     "http": {
       "method": "GET",
       "path": "/hello",
       "protocol": "HTTP/1.1",
-      "sourceIp": "192.168.1.1",
-      "userAgent": "curl/7.68.0"
+      "sourceIp": "127.0.0.1",
+      "userAgent": "curl/7.88.1"
     },
-    "requestId": "test-request-id-124",
-    "routeKey": "GET /hello",
-    "stage": "dev",
-    "time": "17/Mar/2021:13:45:00 +0000",
-    "timeEpoch": 1615986300000
+    "requestId": "1-649320e5-123456781234567812345678",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "21/Jun/2023:16:25:41 +0000",
+    "timeEpoch": 1687364741000
   },
-  "body": "",
   "isBase64Encoded": false
 }

@@ -1,37 +1,40 @@
 {
   "version": "2.0",
-  "routeKey": "POST /users",
+  "routeKey": "$default",
   "rawPath": "/users",
   "rawQueryString": "",
   "headers": {
     "accept": "application/json",
     "content-type": "application/json",
-    "content-length": "55",
-    "host": "api.example.com",
-    "user-agent": "curl/7.68.0",
-    "x-amzn-trace-id": "Root=1-6051b1c5-123456789abcdef012345678",
-    "x-forwarded-for": "192.168.1.1",
-    "x-forwarded-port": "443",
-    "x-forwarded-proto": "https"
+    "content-length": "53",
+    "host": "localhost",
+    "user-agent": "curl/7.88.1",
+    "x-amz-date": "20230621T162541Z",
+    "x-amzn-tls-cipher-suite": "AES128-GCM-SHA256",
+    "x-amzn-tls-version": "TLSv1.2",
+    "x-amzn-trace-id": "Root=1-649320e5-123456781234567812345678",
+    "x-forwarded-for": "127.0.0.1",
+    "x-forwarded-port": "9000",
+    "x-forwarded-proto": "http"
   },
   "requestContext": {
     "accountId": "123456789012",
-    "apiId": "abcdef123",
-    "domainName": "api.example.com",
-    "domainPrefix": "api",
+    "apiId": "1234567890",
+    "domainName": "localhost",
+    "domainPrefix": "localhost",
     "http": {
       "method": "POST",
       "path": "/users",
       "protocol": "HTTP/1.1",
-      "sourceIp": "192.168.1.1",
-      "userAgent": "curl/7.68.0"
+      "sourceIp": "127.0.0.1",
+      "userAgent": "curl/7.88.1"
     },
-    "requestId": "test-request-id-127",
-    "routeKey": "POST /users",
-    "stage": "dev",
-    "time": "17/Mar/2021:13:45:00 +0000",
-    "timeEpoch": 1615986300000
+    "requestId": "1-649320e5-123456781234567812345678",
+    "routeKey": "$default",
+    "stage": "$default",
+    "time": "21/Jun/2023:16:25:41 +0000",
+    "timeEpoch": 1687364741000
   },
-  "body": "{\"name\": \"David Wilson\", \"email\": \"david@example.com\"}",
+  "body": "{\n    \"name\": \"David Lee\",\n    \"email\": \"david@example.com\"\n}",
   "isBase64Encoded": false
 }
