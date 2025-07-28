@@ -25,8 +25,11 @@ This project provides a minimal example of an AWS Lambda function written in Rus
   https://rustup.rs/
   ```sh
   brew tap messense/macos-cross-toolchains
+  
+  brew install aarch64-elf-gcc
+  // or
   brew install aarch64-unknown-linux-gnu
-  brew install FiloSottile/musl-cross/musl-cross
+  
   ```
 
 ## USAGE
